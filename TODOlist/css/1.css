@@ -1,0 +1,30 @@
+header{
+    background-color: rgb(22, 21, 21);
+    width: 100%;
+    height: 60px;
+    /* text-align: center; */
+    color: white;
+    /* font-size: 40px; */
+    box-shadow: 1px,1px,1px,#aaa;
+    position: relative;
+}
+.tto{
+    position: relative;
+font-size: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    margin-left: 200px;
+
+}
+#title{
+    position: absolute;
+    height: 45px;
+    width: 400px;
+    /* padding: 5px; */
+    margin-top: 7px;
+    margin-left: 200px;
+   
+    box-shadow:1px,1px,1px, rgb(112, 92, 92);
+    border-radius: 5px;
+   
+}
