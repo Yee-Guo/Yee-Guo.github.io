@@ -42,7 +42,7 @@ tr{
     color: white;
   }
   .grid-container {
-    display: grid;
+    display: inline-grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: 80px 300px;
     grid-gap: 2px;
