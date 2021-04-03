@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.box{
+    position: fixed;
+    top:100px;
+    left: 100px;
+}
+.box .light{
+    animation: d-light 2s linear infinite;
+}
+.box .light .line{
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    left:50%;
+    top:-30px;
+    transform:translateX(-50%);
+    background-color: red;
+
+}
+.box .light .light-a{
+    width: 150px;
+    height: 120px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 5px 5px 70px 5px red;
+}
+.box .light .light-a::before
+{
+    content:"";
+    position: absolute;
+    left: 50%;
+    top:-10px;
+    transform:translateX(-50%);
+    width: 80px;
+    height: 20px;
+    border-radius: 50% 50% 0 0;
+    z-index:3;
+    background: linear-gradient(to right, #dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03);
+
+}
+.box .light .light-a::after
+{
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom:-10px;
+    transform:translateX(-50%);
+    width: 80px;
+    height: 20px;
+    border-radius: 0 0 50% 50%; 
+    z-index:3;
+    background: linear-gradient(to right, #dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03);
+}
+.box .light .light-b{
+    position: absolute;
+    left: 50%;
+    top:3px;
+
+    transform:translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border:2px solid #da9619;
+}
+.box .light .light-c{
+    position: absolute;
+    left: 50%;
+    top:3px;
+    transform:translateX(-50%);
+    width: 50px;
+    height: 120px;
+    border-radius: 50%;
+    border:2px solid #daab11;
+    text-align: center;
+    line-height: 120px;
+    font-size: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffa500;
+}
+
+.box .light .ear-a{
+    position: absolute;
+    bottom:-30px;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 5px;
+    height: 20px;
+    background-color:#ffa500;
+    animation: d-ear 3s linear infinite;
+} 
+.box .light .ear-b{
+    position: absolute;
+    bottom:-35px;
+    left: 52%;
+    transform:translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(206, 22, 22);
+    z-index:2;
+    
+
+} 
+.box .light .ear-c{
+    position: absolute;
+    bottom:-73px;
+    left: 52%;
+    transform:translateX(-50%);
+    width: 10px;
+    height: 40px;
+    
+    background-color: #ffa500;
+
+} 
+@keyframes d-light
+{
+    0%{
+        transform:rotate(-10deg);
+    }
+    50%{
+        transform:rotate(10deg);
+    }
+    100%{
+        transform:rotate(-10deg);
+    }
+}
+@keyframes d-ear
+{
+    0%{
+        transform:rotate(10deg);
+    }
+    50%{
+        transform:rotate(-10deg);
+    }
+    100%{
+        transform:rotate(10deg);
+    }
+}

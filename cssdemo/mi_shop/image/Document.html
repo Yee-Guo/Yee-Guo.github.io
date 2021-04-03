@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://127.0.0.1:5500/%E8%8E%B7%E5%8F%96%E7%88%B6%E5%AD%90%E7%BB%93%E7%82%B9.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .current {
+        background-color: yellow;
+    }
+
+    #menu ul {
+
+        width: 400px;
+        height: 30px;
+        background-color: rgb(167, 46, 46);
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+
+    }
+
+    li {
+        display: inline;
+        margin: 8px;
+        text-align: center;
+    }
+</style></head>
+
+
+<body>
+    <div id="menu">
+        <ul>
+            <li class="current"><a href="http://www.baidu.com/">首页</a></li>
+            <li><a href="javascript:void(0)">博客</a></li>
+            <li><a href="javascript:void(0)">相册</a></li>
+            <li><a href="javascript:void(0)">关于</a></li>
+            <li><a href="javascript:void(0)">帮助</a></li>
+
+        </ul>
+    </div>
+    <script>
+        var menu = document.getElementById('menu');
+        //处理firstElementChild的兼容性问题
+        function getFirstElementChild(parent) {
+            if (parent.getFirstElementChild) {
+                return parent.getFirstElementChild;
+            }
+            var node, nodes = parent.childNodes, i = 0;
+            while (node = nodes[i++]) {
+                if (node.nodeType == 1) {
+                    return node;
+                }
+            }
+            return null;
+        }
+        var ul = getFirstElementChild(menu);
+        //获取li
+        var list = ul.children;
+        var i = 0; len = list.length;
+        for (; i < len; i++) {
+            //获取的是li的child a
+            var link = getFirstElementChild(list[i]);
+            link.onclick = linkClick;
+        }
+        function linkClick() {
+            for (i = 0; i < len; i++) {
+                list[i].className = '';
+            }
+            this.parentNode.className = "current";
+        }
+        return false;
+
+    </script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>

@@ -2,3 +2,73 @@ body{
     padding: 0;
     margin:0;
 }
+li{
+    list-style: none;
+}
+
+tr{
+   border-style: solid;
+   border:1px solid #08848d;
+       border-color: yellow;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .container .btn ,.container .btn2 ,.container .btn3 {
+  
+ 
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+ 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .container .btn:hover {
+    background-color: black;
+    color: white;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 80px 300px;
+    grid-gap: 2px;
+    background-color: #65cee0;
+    padding: 5px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.986);
+    /* text-align: center; */
+    padding: 10px 0;
+    font-size: 30px;
+  }
+  a{
+      display: flex;
+/* margin: 0 auto; */
+margin-top: 5px;
+margin-left: 30px;
+      text-shadow: #08848d;
+      text-decoration: none;
+      color: rgb(27, 15, 134);
+  }
+  a:hover{
+margin-top: 2px;
+color: rgb(27, 153, 86);
+  }
+  img{
+      background-size: 300px;
+  }

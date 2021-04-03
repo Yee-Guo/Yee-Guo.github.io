@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+  }
+  /*从阿里巴巴矢量库自己的项目那里 放完图标之后 下载到本地 然后把文件解压 
+  里边的文件放在自己项目的font文件夹下
+  新建一个css文件 把阿里巴巴矢量图标库 那个第一步复制下来
+  粘贴到这 然后改一下路径 url写到自己的文件路径
+  然后把第二步复制粘贴到下边 */
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

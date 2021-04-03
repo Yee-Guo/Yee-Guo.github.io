@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background: black;
+    height: 100vh;
+    color: white;
+    display: flex;/*将对象作为弹性伸缩盒显示*/
+    justify-content: center;
+    /*justify-content 用于设置或检索弹性盒子元
+    素在主轴（横轴）方向上的对齐方式。*/
+    align-items: center;
+    --s:rgba(243,156,18,0.8);
+    --e:rgba(26,188,156,0.8);
+    --m:rgba(41,128,185,0.8);
+}
+.sun{
+    position: absolute;
+    background: var(--s);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--s),
+    0 0 20px var(--s),
+    0 0 40px var(--s),
+    0 0 80px var(--s);
+    /*box-shadow: offset-x offset-y blur spread color position;
+    offset-x用于声明阴影的水平偏移，
+　　offset-y用于声明阴影的垂直偏移，
+　blur表示阴影的模糊半径。
+效果与设计软件中使用的高斯模糊滤镜一样。值为0意味着阴影完全不模糊。blur值越大，
+边角越不锋利，阴影越朦胧。不允许负值，负值等同于0。
+spread表示阴影的大小。
+当值为正数，阴影会向四周扩展。若值为负数，阴影会收缩，
+color表示阴影的颜色。
+position表示阴影的位置*/
+    animation: roll 36.5s linear infinite;
+    /*linear:表示动画从头到尾的速度都是相同的。
+    infinite：设置动画无线循环播放。*/
+}
+@keyframes roll{
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+.sun::after{
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border:1px  solid white;
+    /*1px的solid实线 白色边框*/
+    border-radius: 50%;
+    z-index: -1;
+}
+.earth{
+   position: absolute;
+   background: var(--e);
+   width: 20px;
+   height: 20px;
+   left: 200px;
+   border-radius: 50%;
+   box-shadow: 0 0 10px var(--e),
+   0 0 20px var(--e),
+   0 0 30px var(--e),
+   0 0 40px var(--e);
+   animation: roll 3s linear infinite;
+}
+.earth::after{
+    content: "";
+    position: absolute;
+    width: 84px;
+    height: 80px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border:1px solid gray;
+    border-radius: 50%;
+
+}
+.moon{
+    position: absolute;
+    background: var(--m);
+    width: 10px;
+    height: 8px;
+    left: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--m),
+    0 0 10px var(--m),
+    0 0 20px var(--m);
+ }
+ p{
+     font-family: Arial, Helvetica, sans-serif;
+     text-transform: uppercase;
+     /*大写*/
+     font-size: 30px;
+     font-weight: bold;
+     transition: 0.8s linear;
+     /*匀速变换*/
+     z-index: 99;
+
+ }
+p:hover{
+transform: scale(1.2);
+/*scale缩放*/
+opacity: 0.4;
+/*透明度*/
+}

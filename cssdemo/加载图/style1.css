@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:black;
+}
+.main{
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-50%,-50%);
+    /*trasform:translate(-50%,-50%)除了可以水平垂直居中，
+   还可以根据屏幕的大小来调节自身的宽度*/
+}
+.ring{
+    width: 300px;
+    height: 300px;
+    background:linear-gradient(#3498db,transparent 40%);
+    /*linear-gradient线性渐变*/
+    border-radius: 50%;
+    animation: roll 1s linear infinite;
+    /*动画循环*/
+
+}
+@keyframes roll {/*用来设置动画*/
+    100%{
+        transform: rotateZ(360deg);
+        /*z轴旋转*/
+        filter: hue-rotate(360deg);
+        /*hue-rotate色调360旋转*/
+    }
+}
+.ring::before{
+    content:"";
+    position: absolute;
+    width: calc(100%  - 20px);
+    /* calc()函数用于动态计算长度值。
+     calc()函数支持 "+", "-", "*", "/" 运算；
+    calc()函数使用标准的数学运算优先级规则；*/
+    height: calc(100% - 20px);
+    left: 50%;
+    top:50%;
+transform: translate(-50%,-50%);
+background:black;
+border-radius: 50%;
+/*边框圆角*/
+
+}
+.ring::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#3498db,transparent 40%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(30px);
+    /*  filter滤镜函数 blur(px)	给图像设置高斯模糊*/
+
+  
+}
