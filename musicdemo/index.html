@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/music.css">
+    <title>音乐播放器jQuery练习</title>
+</head>
+
+<body>
+    <!-- 横幅begin -->
+    <div class="banner">
+        <ul>
+            <li class="m1" datasrc="autio/zhen.mp3" title="真相是真">
+                <img src="image/1.jpg" width="65">
+            </li>
+            <li class="m2" datasrc="autio/man.mp3" title="慢慢喜欢你">
+                <img src="image/2.jpg" width="90">
+            </li>
+            <li class="m3" datasrc="autio/sk.mp3" title="it's rain">
+                <img src="image/3.jpg" width="150">
+            </li>
+            <li class="m4" datasrc="autio/wuzhong.mp3" title="雾中列车">
+                <img src="image/4.jpg" width="90">
+            </li>
+            <li class="m5" datasrc="autio/youshang.mp3" title="最暖的忧伤">
+                <img src="image/5.jpg" width="100">
+            </li>
+        </ul>
+        <audio src="音乐文件"></audio>
+    </div>
+    <!-- 横幅end -->
+    <!-- 播放器begin -->
+    <div class="music">
+        <div class="m_img">
+            <img src="image/3.jpg" width="100px">
+        </div>
+        <div class="m_text">真相是真</div>
+        <div class="m_btn">
+            <a href="#" class="m_prev" title="上一首">
+            </a>
+            <a href="#" class="m_play" title="播放">
+            </a>
+            <a href="#" class="m_next" title="下一首">
+
+            </a>
+        </div>
+        <div class="m_close"></div>
+        <audio src="autio/zhen.mp3" class="m_mp3"></audio>
+    </div>
+    <!-- 播放器end -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="/js/music.js"></script>
+</body>
+
+</html>

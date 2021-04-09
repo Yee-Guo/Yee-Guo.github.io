@@ -33,6 +33,7 @@ body{
 }
 .box ul li{
     list-style: none;
+    padding: 3px;
 }
 h1{
     font-size: 40px;
@@ -58,8 +59,8 @@ p{
     padding: 20px;
 }
 .text a{
-    
-    width: 60px;
+    /* padding: 3px; */
+    width: 50px;
     height: 30px;
     transition: all ease-in-out 300ms;
 }

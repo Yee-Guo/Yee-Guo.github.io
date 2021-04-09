@@ -1,0 +1,198 @@
+@charset "utf-8";
+body{
+    background: url("../image/背景1.jpg") no-repeat;
+    background-size: cover;
+
+}
+/* banner */
+/* 横幅的宽高背景图阴影 */
+.banner{
+    width: 960px;
+    height: 250px;
+    background:url("../image/banner.jpg") ;
+    background-size: 500px;
+    margin:66px 6px;
+    opacity: 0.8;/*透明*/
+    box-shadow: 10px 10px 15px 1px #8c8f82; 
+    position: relative; /*子绝父相*/
+}
+.banner ul li{
+    list-style: none;
+    display: inline-block;/*行内块元素类似导航条*/
+    position: absolute;
+   
+}
+.banner ul li img{
+    border-radius: 50%;/*圆*/
+    cursor: pointer;
+}
+.m1{
+    top:20px;
+    left: 10px;
+}
+.m2{
+    top:120px;
+ 
+    left:60px;
+}
+.m3{
+    top:60px;
+    left: 300px;
+}
+.m4{
+    top:50px;
+    left: 500px;
+}
+.m5{
+    top:140px;
+    left: 600px;
+}
+/* 图片旋转的动画 */
+@keyframes img_rotate{
+    from { 
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.banner .img_rotate{
+    animation: img_rotate 2s infinite linear;
+}
+/* 播放器 */
+.music{
+    width: 550px;
+    height: 120px;
+    background: rgb(10, 0, 0);
+    position: relative;
+    left: 0;
+    margin-left: 0;
+    bottom: -7px;
+    opacity: 0.8;
+    box-shadow: 15px 10px 10px 1px #8c8f82;
+
+}
+/* 图片位置 */
+.music .m_img{
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+/* 文字位置 */
+.music .m_text{
+ 
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    color: white;
+    margin-left: 20px;
+    margin-top: 50px
+}
+/* 绝对定位，防止歌曲名字过长，挤走 */
+.music .m_btn{
+    float: left;
+    position: absolute;
+    left: 320px;
+}
+/* 修改a标签 */
+.music .m_btn a{
+    /* margin-left: 200px; */
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: url("../image/bgccc.png") ;
+
+    /* background-size: ; */
+    /* position:absolute; */
+    /* background:transparent; */
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+.music .m_btn .m_prev{background-position: 658px -15px;}
+.music .m_btn .m_prev:hover{background-position: 658px -55px;}
+.music .m_btn .m_play{background-position: 611px -18px;}
+.music .m_btn .m_play:hover{background-position: 611px -70px;}
+.music .m_btn .m_next{background-position: 561px -15px;}
+.music .m_btn .m_next:hover{background-position: 561px -55px;}
+
+.music .m_close{
+    width: 23px;
+    height: 120px;
+    float: right;
+    
+    background: url(../image/bgccc.png);
+    background-position:748px -19px;
+    cursor: pointer;
+}
+.music .m_btn .m_pause{background-position: -379px -128px;
+
+}
+.music .m_btn .m_pause:hover{background-position: -432px -128px;
+
+}
+/* 隐藏或者打开的样式 */
+.music  .m_open{
+    background-position: -66px -18px;
+
+}
+
+
+/* .music .m_close:hover{
+    background-position: 0 0;
+} */
+/* .music .m_btn a:nth-child(1) img{
+  
+    width: 50px;
+    height: 50px;
+    margin: 43px 0 0 56px;
+    float: left;
+
+}
+.music .m_btn a:nth-child(2) img{
+   
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 46px 0 0 56px;
+
+}
+
+.music .m_btn a:nth-child(3) img{
+   
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: -50px 0 0 256px;
+
+} */
+
+
+/* .m_prev img{
+    float: left;
+    margin-top: 60px;
+margin-left: 40px;
+
+
+}
+
+.m_play img{
+    float: left;
+   background: url("../image/下一首.png") no-repeat; 
+    width:50px;
+    height: 50px;
+    background-color: rgba(228, 228, 228,0.);
+ 
+    margin-top: -48px;
+    margin-left: 160px;
+
+}
+.m_next img{
+    float: left;  
+    width:50px;
+    height: 50px;
+    background-color: rgba(228, 228, 228,0.);
+   margin: -50px 0 0 280px;
+  
+
+}  */
