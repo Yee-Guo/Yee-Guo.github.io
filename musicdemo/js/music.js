@@ -38,7 +38,7 @@ function change_bg(idx) {//更换背景图
     // console.log(1),
     $("body").css({
         //动态传入图片名称 用数字命名，this.index+1
-        "background": "url(../image/" + idx + ".jpg) no-repeat",
+        "background": "url(/musicdemo/image/" + idx + ".jpg) no-repeat",
         "background-size": "1270px",
         "background-position": "center"
 
