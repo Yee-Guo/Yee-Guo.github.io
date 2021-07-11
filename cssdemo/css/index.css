@@ -1,39 +1,104 @@
 body{
-    padding: 0;
-    margin:0;
+    overflow: hidden;
 }
-li{
-    list-style: none;
+section 
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #ff359b,#dff1ff);
+    /*渐变色*/
 }
+section::before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    border-top:1px solid rgba(255,255,255,0.5);
 
-  .grid-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 80px 300px;
-    grid-gap: 2px;
-    background-color: #65cee0;
-    padding: 5px;
-  }
+
+}
+section .color{
+    position: relative;
+    filter: blur(150px);
+    /*加个高斯滤镜参数越大越模糊*/
+
+}
+section .color:nth-child(1){
+    background: #ff359b;
+    width: 600px;
+    height: 600px;
+    top: -350px;
+}
+section .color:nth-child(2){
+    background: #00d2ff;
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    left: 100px;
+}
+section .color:nth-child(3){
+    background: #fffd87;
+    width: 300px;
+    height: 300px;
+    bottom: -150px;
+    right: 0px;
+
+}
+/*三个颜色块向右下方分布*/
+ul{
+    position: relative;
+    display: flex;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+ul li {
+    position: relative;
+    list-style: none;/*去掉li的小圆点*/
+    margin: 10px;
+    top:40px;
   
-  .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.986);
-    /* text-align: center; */
-    padding: 10px 0;
-    font-size: 30px;
-  }
-  a{
-      display: flex;
-/* margin: 0 auto; */
-margin-top: 5px;
-margin-left: 30px;
-      text-shadow: #08848d;
-      text-decoration: none;
-      color: rgb(27, 15, 134);
-  }
-  a:hover{
-margin-top: 2px;
-color: rgb(27, 153, 86);
-  }
-  img{
-      background-size: 300px;
-  }
+}
+ul li a{
+    position: relative;
+    width: 200px;
+    height: 80px;
+    display: flex;
+    border-radius: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    border:1px solid rgba(255,255,255,0.4);
+    border-right:1px solid rgba(255,255,255,0.2);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.1);
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    overflow: hidden;
+}
+ul li a:hover{
+    transform:translateY(-20px);
+}
+ul li a::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background:rgba(255,255,255,0.5);
+    transform:skewX(45deg) translateX(150px);
+    transition:0.5s;
+
+}
+ul li a:hover::before{
+    transform:skewX(45deg) translateX(-150px);
+}
