@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 绑定一个show方法 -->
+        <button @click="show" value="打印一个笑话">打印一个笑话</button>
+        <!-- 插值法显示，数据是动态的 -->
+        <p>{{ joke }}</p>
+
+    </div>
+    <!-- <input type="button" id="post" value="post请求">
+    <input type="button" id="get" value="get请求"> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        // document.querySelector("#get").onclick = function () {
+        //     axios.get("https://autumnfish.cn/api/joke/list?num=3").then(function (res) {
+        //         console.log(res.data.jokes);
+        //     })
+        // }
+        var app = new Vue({
+            el: "#app",
+            data: {
+                joke: "hahha"
+            },
+            methods: {
+                show: function () {
+                    var index = this;
+                    // 保存此时的this,因为使用axios后this指向变化
+                    axios.get("https://autumnfish.cn/api/joke").then(function (res) {
+                        console.log(res.data);
+                        index.joke = res.data;
+                        console.log(joke);
+                    })
+                }
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>

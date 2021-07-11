@@ -7,7 +7,7 @@ body{
 }
 .box{
     /* 盒子里放着卡片 */
-    width: 30%;
+    width: 40%;
     height: 30%;
     background: rgba(0,0,0,0.3);
     margin:0 auto;
