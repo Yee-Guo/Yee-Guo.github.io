@@ -1,8 +1,9 @@
 body{
     padding: 0;
     margin: 0;
-    background: url(../image/lv.jpg) no-repeat;
+    /* background: url(../image/lv.jpg) no-repeat; */
     background-size: 1500px;
+    background-color: rgb(220, 241, 240);
     width: 100vw;
 }
 .box{
@@ -15,7 +16,7 @@ body{
     text-align: center;
     color: white;
     border-radius: 20px;
-    background-image: linear-gradient(hsl(298, 75%, 29%), #08848d);
+    background-image: linear-gradient(hsl(298, 58%, 63%), #4cbfc7);
     box-shadow: 1px 1px 1px 1px #72b8e4;
 }
 .box img{
